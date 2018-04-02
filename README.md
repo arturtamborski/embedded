@@ -22,26 +22,25 @@ NC: Not Connected
 ```
 
 ```shell
-  # scan for MAC address
-  hcitool scan
+# scan for MAC address
+hcitool scan
 
-  # it if it found something then you're ok
-  # if not then be sure that you're visible and the module is in range
-  # also, make sure that it its powered on and your bluetooth is turned on
+# it if it found something then you're ok
+# if not then be sure that you're visible and the module is in range
+# also, make sure that it its powered on and your bluetooth is turned on
 
-  # connect
-  sudo rfcomm /dev/rfcomm0 <MAC ADDRESS HERE> 1
-
+# connect
+sudo rfcomm /dev/rfcomm0 <MAC ADDRESS HERE> 1
 ```
 
 in separate terminal
 ```shell
-  # read the virtual tty
-  sudo cat /dev/rfcomm0
+# read the virtual tty
+sudo cat /dev/rfcomm0
 
-  # or use something more advanced
-  sudo apt install minicom
-  minicom -D /dev/rfcomm0
+# or use something more advanced
+sudo apt install minicom
+minicom -D /dev/rfcomm0
 ```
 
 
