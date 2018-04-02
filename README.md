@@ -38,6 +38,10 @@ in separate terminal
 ```shell
   # read the virtual tty
   sudo cat /dev/rfcomm0
+
+  # or use something more advanced
+  sudo apt install minicom
+  minicom -D /dev/rfcomm0
 ```
 
 
