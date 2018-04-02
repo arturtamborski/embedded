@@ -1,0 +1,5 @@
+bin/
+*.o
+*.so
+*.elf
+rfcomm.sh
