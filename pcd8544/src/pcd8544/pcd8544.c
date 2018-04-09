@@ -22,7 +22,7 @@ static const unsigned char pcd8544_font[][PCD8544_CHARACTER_WIDTH] =
 
 
 #if PCD8544_BUFFERED
-static struct pcd8544_buffer
+struct pcd8544_buffer
 {
 	uint8_t x, y;
 	uint8_t data[PCD8544_SCREEN_BYTES];
@@ -273,9 +273,9 @@ void
 pcd8544_puti(int8_t i)
 {
 	if (i < 0)
-		pcd8544_putc('-');
+		pcd8544_putc('-'), i = ~i;
 
-	pcd8544_putu(~i + 1);
+	pcd8544_putu(i);
 }
 
 

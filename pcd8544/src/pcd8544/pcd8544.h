@@ -159,7 +159,7 @@
  *       But you probably want this to be turned off,
  *       because the gained speed is not worth so much memory.
  */
-#define PCD8544_BUFFERED 0
+#define PCD8544_BUFFERED 1
 
 
 /*** Switch for storing font in PROGMEM.
