@@ -1,4 +1,4 @@
-# temperature
+# ds18b20
 
 Read temperature from DS18B20 and send it trough UART.
 
