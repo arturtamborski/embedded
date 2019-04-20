@@ -1,5 +1,5 @@
-# embeded
-Bunch of simple embeded projects written for AVR chips
+# embedded
+Bunch of simple projects written for AVR chips
 
 ## bluetooth UART
 Most of those projects use bluetooth UART module HC-05 for debugging purposes.
