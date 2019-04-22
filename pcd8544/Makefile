@@ -38,7 +38,7 @@ run: $(TARGET)
 	@avrdude $(PGFLAGS) -c usbasp -p $(CPU) -P $(PORT) -b $(SPEED) -U flash:w:$(TARGET)
 
 clean:
-	@rm -r $(OBJDIR)/$(TARGET).elf $(TARGET) $(OBJS) $(OBJDIR) 2>/dev/null || true
+	@rm -r $(OBJDIR)/$(TARGET:.hex=.elf) $(TARGET) $(OBJS) $(OBJDIR) 2>/dev/null || true
 
 $(TARGET): $(OBJS) | $(OBJDIR)
 	@$(LD) -mmcu=$(MMCU) $(LDFLAGS) -L$(OBJDIR) -o $(OBJDIR)/$(@:.hex=.elf) $^
